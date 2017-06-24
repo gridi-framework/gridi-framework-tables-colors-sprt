@@ -1,0 +1,17 @@
+$tables-colors-support-extra-colors-palette: () !default;
+$tables-colors-support-skip-colors-palette: null !default;
+
+//Th
+$th-colors-support-parser: (
+    color: 'color'
+) !default;
+
+//Td
+$td-even-colors-support-parser: (
+    color: 'color'
+) !default;
+
+//Caption
+$caption-colors-support-parser: (
+    color: 'color'
+) !default;
