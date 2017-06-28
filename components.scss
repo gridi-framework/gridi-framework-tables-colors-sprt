@@ -1,18 +1,13 @@
 @each $palette-color-prefix, $palette-color-variables in get-colors-palette($tables-colors-support-extra-colors-palette, $tables-colors-support-skip-colors-palette) {
     .#{$colors-class-prefix}-#{$palette-color-prefix} table,
     table.#{$colors-class-prefix}-#{$palette-color-prefix} {
-        color: map_get($palette-color-variables, map_get($tables-colors-support-parser, color));
-
-        th {
-            color: map_get($palette-color-variables, map_get($th-colors-support-parser, color));
-        }
-
-        tr:nth-child(even) td {
-            color: map_get($palette-color-variables, map_get($td-even-colors-support-parser, color));
-        }
-
-        caption {
-            color: map_get($palette-color-variables, map_get($caption-colors-support-parser, color));
-        }
+        @include include-table-colors(parse-map($tables-colors-support-parser, $palette-color-variables));
+        //Caption
+        @include caption-colors(parse-map($caption-colors-support-parser, $palette-color-variables));
+        //Th
+        @include th-colors(parse-map($th-colors-support-parser, $palette-color-variables));
+        //Td
+        @include td-colors(parse-map($td-colors-support-parser, $palette-color-variables));
+        @include td-even-colors(parse-map($td-even-colors-support-parser, $palette-color-variables));
     }
 }

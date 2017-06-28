@@ -1,21 +1,29 @@
 $tables-colors-support-parser: (
+    border-color: null,
     color: 'color'
 ) !default;
 
 $tables-colors-support-extra-colors-palette: () !default;
 $tables-colors-support-skip-colors-palette: null !default;
 
+//Caption
+$caption-colors-support-parser: (
+    color: 'color'
+) !default;
+
 //Th
 $th-colors-support-parser: (
+    background: null,
     color: 'color'
 ) !default;
 
 //Td
-$td-even-colors-support-parser: (
-    color: 'color'
+$td-colors-support-parser: (
+    background: null,
+    color: null
 ) !default;
 
-//Caption
-$caption-colors-support-parser: (
+$td-even-colors-support-parser: (
+    background: null,
     color: 'color'
 ) !default;
